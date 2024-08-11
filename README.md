@@ -33,4 +33,4 @@ A simple GUI application built with Python and Tkinter to help users take breaks
 
 ## Contributing
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/your-username/20-20-20-eye-care).
+Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/eyuel-stack/20-20-20-Eye-care-timer).
