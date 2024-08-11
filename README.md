@@ -7,6 +7,7 @@ A simple GUI application built with Python and Tkinter to help users take breaks
 - Reminds the user to look at an object 20 feet away for 20 seconds every 20 minutes.
 - Displays a notification window with a moving object that the user can focus on.
 - Provides a shortcut to launch the application on startup.
+- Supports Windows and Linux operating systems.
 
 ## Installation
 
