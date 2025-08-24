@@ -1,37 +1,75 @@
-# 20-20-20 Eye Care
+# 20-20-20 Eye Care Timer
 
-A simple GUI application built with Python and Tkinter to help users take breaks and care for their eyes while working on a computer.
+**Version:** 2025  
+**Platform:** Windows, Linux, macOS
+
+---
+
+## Description
+
+20-20-20 Eye Care Timer is a simple app that reminds you to rest your eyes every 20 minutes. Even if you close the main window, the app continues running in the background and triggers a **full-screen 20-second break** to protect your eyes.
+
+---
 
 ## Features
 
-- Reminds the user to look at an object 20 feet away for 20 seconds every 20 minutes.
-- Displays a notification window with a moving object that the user can focus on.
-- Provides a shortcut to launch the application on startup.
-- Supports Windows and Linux operating systems.
+- Automatic **20-minute reminders**
+- Full-screen **20-second break** for eye rest
+- Runs in the background even when the window is closed
+- Three main buttons in the UI:
+  - **Exit:** Completely closes the app (stops background running)
+  - **Pause:** Temporarily pauses the countdown timer
+  - **Resume:** Resumes the countdown if paused
 
-## Installation
+---
 
-### Windows
+## Installation & Setup
 
-1. Download the executable file (`20-20-20_eye_care.exe`) from the [latest release](https://github.com/your-username/20-20-20-eye-care/releases/latest).
-2. Create a shortcut for the executable file and place it in the `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup` directory to launch the application on startup.
+### Windows Users
 
-### Linux
+1. **Download the app**
+   - Download & Extract zip
+   - open the dist folder
+   - Place `dist/20_20_20.exe` in a folder of your choice (e.g., `C:\Apps\20_20_20`).
 
-1. Download the Python script (`20-20-20_eye_care.py`) from the [latest release](https://github.com/your-username/20-20-20-eye-care/releases/latest).
-2. Install the required dependencies:
-   - `sudo apt-get install python3 python3-tk`
-3. Convert the Python script to a standalone executable using PyInstaller:
-   - `pip install pyinstaller`
-   - `pyinstaller --onefile 20-20-20_eye_care.py`
-4. Create a shortcut for the executable file (located in the `dist` directory) and place it in the user's startup directory (e.g., `~/.config/autostart/`) to launch the application on startup.
+2. **Create Startup Shortcut (For AutoStart)**
 
-## Usage
+   - Press `Win + R`, type `shell:startup`, and press Enter
+   - Copy a **shortcut** of `20_20_20.exe` into this Startup folder
+   - The app will now **start automatically when Windows boots**
 
-1. Launch the "20-20-20 Eye Care" application.
-2. The application will display a notification window with a moving object every 20 minutes.
-3. Look at the moving object for 20 seconds to give your eyes a break.
+---
 
-## Contributing
+### Linux & macOS Users
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/eyuel-stack/20-20-20-Eye-care-timer).
+1. **Download the Python version**
+
+   - Place `src/20_20_20.py` in a folder you prefer
+
+2. **Run with Python 3**
+   ```bash
+   python3 /path/to/20_20_20.py
+   ```
+
+3. **Auto-start the app at login**
+
+### Linux (using `.config/autostart`)
+
+1. Create a file `~/.config/autostart/20_20_20.desktop` with the following content:
+
+   ```ini
+   [Desktop Entry]
+   Type=Application
+   Exec=python3 /path/to/20_20_20.py
+   Hidden=false
+   NoDisplay=false
+   X-GNOME-Autostart-enabled=true
+   Name=20-20-20 Eye Care Timer
+   Comment=Automatically starts the Eye Care Timer at login
+2. Save the file. The app will start automatically on login.
+
+### macOS (using Login Items or Automator)
+
+1. Open System Preferences → Users & Groups → Login Items
+2. Click + and select your `src/20_20_20.py` or a Python launcher script
+3. The app will now start automatically on login.
